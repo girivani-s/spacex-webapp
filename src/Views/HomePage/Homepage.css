@@ -1,0 +1,26 @@
+.summay-container {
+    background-image: url("/src/assets/background.jpg");
+    /* background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+        url("/src/assets/background.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+}
+
+.company-statistics-section {
+    height: 20vh;
+}
+
+.company-statistics-section p {
+    color: var(--color-white);
+    text-align: center
+}
+
+.company-statistics-section:hover {
+    background-color: var(--color-white);
+}
+
+.company-statistics-section:hover p {
+    color: var(--secondary);
+}
