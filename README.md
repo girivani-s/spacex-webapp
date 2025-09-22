@@ -3,11 +3,11 @@
 ## Pages
 ### 1. Home Page
 
-- Include information such as **company information, upcoming launches**.
+- Include information such as **summary, company information, directors**.
 - The page has the following menu items:
-  - **History**
   - **Launches**
   - **Rockets**
+  - **History**
 
 ### 2. Rockets
 
@@ -18,11 +18,15 @@
 - A **search option** by rocket name.
 - When a user clicks on one of the rocket, the user is redirected to **Rocket Details Page** for that rocket.
 
-### 3. Rocket Details Page
+### 3. Launches
+
+- Displays SpaceX launches with pagination for easy navigation.
+- Shows detailed launch information in a structured table format.
+
+### 4. Rocket Details Page
 
 - Detailed info on the rocket
-- Extenal links to wikipedia, twitter etc
-- Youtube preview
+- Images of Rocket
 
 
 ## 🧰 Tools
@@ -41,3 +45,4 @@ React
 - Redux
 - React router
 - Axios
+- Dayjs
