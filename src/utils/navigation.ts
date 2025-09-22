@@ -8,7 +8,7 @@ export const navigationLinks = [
 		text: "Rockets",
 	},
 	{
-		path: "/launches",
-		text: "Launches",
+		path: "/history",
+		text: "History",
 	},
 ];

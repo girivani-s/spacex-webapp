@@ -14,8 +14,8 @@ import twitterLogo from "./assets/twitter.png";
 import flickrLogo from "./assets/flickr.png";
 import spacexLogoSmall from "./assets/spacex-logo-small.png";
 import menuIcon from "./assets/menu-bar.png";
-import closeIcon from "./assets/close.png";
-import { navigationLinks } from "./utils/navigation";
+import { DesktopNav } from "./Components/Nav/DesktopNav";
+import { MobileNav } from "./Components/Nav/MobileNav";
 
 const App = () => {
 	const dispatch = useDispatch();
@@ -31,6 +31,7 @@ const App = () => {
 				axios.get<LaunchesType>(apiToUrlMap.getLaunches),
 				axios.get<RocketInfo>(apiToUrlMap.getRockets),
 			]);
+
 			dispatch(setCompanyInfo(companyInfo.data));
 			dispatch(setHistory(history.data));
 			dispatch(setLaunches(launches.data));
@@ -39,6 +40,8 @@ const App = () => {
 			console.error(err);
 		}
 	};
+
+	const closeMobileNav = () => setIsMobileNavOpen(false);
 
 	useEffect(() => {
 		fetchData();
@@ -49,34 +52,13 @@ const App = () => {
 	return (
 		<>
 			{/* Mobile Nav */}
-			{isMobileNavOpen && (
-				<div className="fixed z-10 h-dvh w-dvw bg-bg-primary p-2">
-					<div className="flex ">
-						<Link to="/" className="flex-1">
-							<img src={logo} />
-						</Link>
-						<img src={closeIcon} className="h-4 invert self-end" onClick={() => setIsMobileNavOpen(false)} />
-					</div>
-					<nav className="flex flex-col items-center gap-10 text-lg mt-20 links-container">
-						{navigationLinks.map(({ path, text }) => (
-							<Link to={path} className="w-full text-center" onClick={() => setIsMobileNavOpen(false)}>
-								{text}
-							</Link>
-						))}
-					</nav>
-				</div>
-			)}
+			{isMobileNavOpen && <MobileNav closeMobileNav={closeMobileNav} />}
 
-			{/*  */}
 			<div className="flex items-baseline p-2 bg-black nav-container">
 				<Link to="/" className="flex-1">
 					<img src={logo} />
 				</Link>
-				<nav className="hidden md:flex items-center gap-15 text-lg links-container">
-					{navigationLinks.map(({ path, text }) => (
-						<Link to={path}>{text}</Link>
-					))}
-				</nav>
+				<DesktopNav />
 
 				<div className="flex-1"></div>
 				<div className="md:hidden flex items-center">

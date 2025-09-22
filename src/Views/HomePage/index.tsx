@@ -55,7 +55,7 @@ const HomePage = () => {
 			</div>
 			<div className="grid grid-cols-2 md:grid-cols-4 place-items-center company-statistics-container bg-black">
 				{companyStatistics.map(({ value, text }) => (
-					<div className="w-full flex flex-col flex-1 items-center justify-center company-statistics-section">
+					<div key={text} className="w-full flex flex-col flex-1 items-center justify-center company-statistics-section">
 						<p>{value}</p>
 						<p>{text}</p>
 					</div>
@@ -64,7 +64,7 @@ const HomePage = () => {
 			{/* Company directors */}
 			<div className="flex justify-evenly h-fit">
 				{directors.map(({ name, image, position }) => (
-					<div className="h-fit relative">
+					<div key={name} className="h-fit relative">
 						<img src={image} className="w-30 h-30 md:w-50 md:h-50 contain" />
 						<div className="absolute bottom-0 text-center w-full bg-black/80">
 							<p className="text-grey">{name.split(" ")[0]}</p>

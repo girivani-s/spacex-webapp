@@ -15,8 +15,8 @@ export const router = createBrowserRouter([
 			{ path: "launches", Component: Launches },
 			{
 				path: "rockets",
-				Component: Rockets,
 				children: [
+					{ index: true, Component: Rockets },
 					{
 						path: ":rocketId",
 						Component: RocketDetails,
