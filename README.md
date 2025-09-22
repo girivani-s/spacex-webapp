@@ -20,13 +20,13 @@
 
 ### 3. Launches
 
-- Displays SpaceX launches with pagination for easy navigation.
-- Shows detailed launch information in a structured table format.
+- Displays SpaceX launches with **pagination** for easy navigation.
+- Shows detailed launch information in a structured **table** format.
 
 ### 4. Rocket Details Page
 
 - Detailed info on the rocket
-- Images of Rocket
+- **Images** of Rocket
 
 
 ## 🧰 Tools
