@@ -3,7 +3,7 @@
 ## Pages
 ### 1. Home Page
 
-- Include information such as **summary, company information, directors**.
+- Include information such as **summary, company information & directors**.
 - The page has the following menu items:
   - **Launches**
   - **Rockets**
